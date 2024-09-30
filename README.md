@@ -6,8 +6,7 @@ npm install express dotenv | npm install --save-dev @types/express @types/node
 
 # Definir Variáveis de ambiente:
 
-JWT_SECRET --> Use o comando openssl rand -base64 32, padrão 'default'
-PORT --> Defina a porta, padrão 3000
+JWT_SECRET --> Use o comando openssl rand -base64 32, padrão 'default' | PORT --> Defina a porta, padrão 3000
 
 # Executar:
 
