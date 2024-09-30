@@ -29,7 +29,7 @@ export const registerPassword = async (req: Request, res: Response) => {
         const user = result.rows[0];
 
         if (user.passwd_hash) {
-            return res.status(200).json({ message: 'Você ja tem uma senha!, por favor faça login' });
+            return res.status(200).json({ message: 'Você já possui uma senha!, por favor faça login' });
         } else {
             
             const hashedPassword = await bcrypt.hash(password, 10);
