@@ -2,8 +2,7 @@
 
 # Instalar os módulos e configurar as seguintes definições:
 
-npm install express dotenv
-npm install --save-dev @types/express @types/node
+npm install express dotenv | npm install --save-dev @types/express @types/node
 
 # Definir Variáveis de ambiente:
 
