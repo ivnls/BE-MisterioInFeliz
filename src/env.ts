@@ -10,6 +10,7 @@ const env: Env = {
     DB_PORT: parseInt(process.env.DB_PORT!, 10),
     EMAIL_USER: process.env.EMAIL_USER!,
     EMAIL_PASS: process.env.EMAIL_PASS!,
+    SRV_HOST: process.env.SRV_HOST!,
 };
 
 export default env;

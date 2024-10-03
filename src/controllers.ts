@@ -22,7 +22,7 @@ export const login = async (req: Request, res: Response) => {
 
       const isPasswordValid = await bcrypt.compare(password, user.passwd_hash)
       if (isPasswordValid) {
-        const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET!, { expiresIn: '1h' })
+        const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET!, { expiresIn: '15m' })
         return res.status(200).json({ message: 'Login bem-sucedido! Tenha uma boa jogatina!', token })
       } else {
         return res.status(400).json({ error: 'Credenciais inválidas' })
@@ -57,9 +57,9 @@ export const register = async (req: Request, res: Response) => {
 
     if (userExists.rowCount! > 0) {
       return res.status(400).json({ error: 'Este email já está registrado' })
-    }
+    } 
 
-    const token = jwt.sign({ email }, process.env.JWT_SECRET!, { expiresIn: '1h' })
+    const token = jwt.sign({ email }, process.env.JWT_SECRET!, { expiresIn: '15m' })
     sendVerificationEmail(email, token)
 
     const hashedPassword = await bcrypt.hash(password, 12)

@@ -13,7 +13,7 @@ export const sendVerificationEmail = (email: string, token: string) => {
     from: process.env.EMAIL_USER,
     to: email,
     subject: 'Verificação de E-mail',
-    text: `Clique no link para verificar seu e-mail: http://localhost:3000/api/verify-email?token=${token}`
+    text: `Clique no link para verificar seu e-mail: http://` + process.env.SRV_HOST + `:3000/api/verify-email?token=${token}`
   }
 
   transporter.sendMail(mailOptions, (error, info) => {

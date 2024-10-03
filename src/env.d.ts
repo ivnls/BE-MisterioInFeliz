@@ -8,4 +8,5 @@ export interface Env {
     DB_PORT: number
     EMAIL_USER: string
     EMAIL_PASS: string
+    SRV_HOST: string
 }
