@@ -20,7 +20,7 @@ export const sendVerificationEmail = (email: string, token: string) => {
     if (error) {
       console.log(error)
     } else {
-      console.log('E-mail enviado: ' + info.response)
+      console.log('E-mail enviado')
     }
   })
 }
